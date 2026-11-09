@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-santa-light text-santa-dark antialiased;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-santa-red text-white px-5 py-2.5 rounded-xl font-semibold shadow-md hover:bg-santa-redDark transition-all active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply bg-white text-santa-dark border border-santa-red px-5 py-2.5 rounded-xl font-semibold shadow-sm hover:bg-santa-light transition-all active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+  .btn-success {
+    @apply bg-santa-green text-white px-5 py-2.5 rounded-xl font-semibold shadow-md hover:bg-santa-greenDark transition-all active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+  .input-field {
+    @apply w-full px-4 py-2.5 rounded-xl border border-santa-light/60 bg-white text-santa-dark focus:ring-2 focus:ring-santa-red focus:border-transparent outline-none transition-all;
+  }
+  .select-field {
+    @apply w-full px-4 py-2.5 rounded-xl border border-santa-light/60 bg-white text-santa-dark focus:ring-2 focus:ring-santa-red focus:border-transparent outline-none transition-all appearance-none;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-xl border border-santa-light/40 p-6;
+  }
+  .table-row {
+    @apply flex items-center justify-between px-4 py-3 border-b border-santa-light/30 hover:bg-santa-light/20 transition-colors;
+  }
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+}
+
+.snowflake {
+  position: fixed;
+  top: -10px;
+  z-index: 0;
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.2rem;
+  animation: snow linear infinite;
+}
